@@ -324,6 +324,9 @@ h1 em { color: var(--blue); font-style: normal; }
 .contact > p:not(.section__label) { max-width: 640px; color: rgba(255,255,255,.94); font-size: 18px; font-weight: 500; line-height: 1.6; }
 .button--light { color: var(--blue); background: var(--white); }
 .button--ghost { color: var(--white); border: 1px solid rgba(255,255,255,.3); }
+.contact__resume-note { margin: 18px 0 0; font-size: 15px; }
+.contact__resume-note a { color: rgba(255,255,255,.88); text-underline-offset: 3px; }
+.contact__resume-note a:hover { color: var(--white); }
 .social-grid { margin-top: 56px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.23); border-left: 1px solid rgba(255,255,255,.23); }
 .social-grid > * { min-height: 112px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid rgba(255,255,255,.23); border-bottom: 1px solid rgba(255,255,255,.23); text-decoration: none; }
 .social-grid span { color: rgba(255,255,255,.82); font-size: clamp(12px, 1vw, 14px); letter-spacing: .08em; text-transform: uppercase; }
