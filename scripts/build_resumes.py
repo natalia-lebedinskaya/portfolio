@@ -185,9 +185,12 @@ def build_resume(path, content):
 
     section(story, st, content["projects_heading"])
     for item in content["projects"]:
+        project_text = f'<b>{item["title"]}</b> - {item["description"]}'
+        if item.get("url"):
+            project_text += f' {link(item["url"], item["link_label"])}'
         story.append(
             Paragraph(
-                f'<b>{item["title"]}</b> - {item["description"]} {link(item["url"], item["link_label"])}',
+                project_text,
                 st["body"],
             )
         )
@@ -250,10 +253,8 @@ EN = {
     "projects_heading": "SELECTED PET PROJECTS",
     "projects": [
         {
-            "title": "CareerMove",
+            "title": "CareerMove (private pet project)",
             "description": "job-search and application-tracking web app; QA of aggregation, filtering, deduplication, auth, persistence and integrations.",
-            "url": "https://careermove-web.vercel.app",
-            "link_label": "Live product",
         },
         {
             "title": "FOT AI",
@@ -322,10 +323,8 @@ RU = {
     "projects_heading": "PET PROJECTS",
     "projects": [
         {
-            "title": "CareerMove",
+            "title": "CareerMove (приватный pet project)",
             "description": "web-сервис поиска вакансий и учета откликов; тестирование агрегации, фильтров, дедупликации, авторизации, сохранения данных и интеграций.",
-            "url": "https://careermove-web.vercel.app",
-            "link_label": "Открыть сервис",
         },
         {
             "title": "FOT AI",
