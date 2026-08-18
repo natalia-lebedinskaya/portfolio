@@ -6,8 +6,14 @@ Static English-language portfolio for international QA roles in fintech and AI p
 
 Open `index.html` directly or serve the folder with any static web server.
 
+Rebuild both resume PDFs with:
+
+```bash
+python3 scripts/build_resumes.py
+```
+
 ## Deployment notes
 
 - Employer names are generalized for an internationally focused public portfolio.
-- LinkedIn is included; add an English CV link when the final PDF is ready.
+- English and Russian CVs are published from `assets/` and can be rebuilt with `scripts/build_resumes.py`.
 - Use a short custom domain after the content is approved.
