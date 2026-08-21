@@ -165,7 +165,7 @@ def build_resume(path, content):
                     link("mailto:natalia.lebedinskaya@outlook.com", "natalia.lebedinskaya@outlook.com"),
                     link("https://github.com/ProhaskoNatalia", "GitHub"),
                     link("https://natalia-lebedinskaya.github.io/portfolio/", "Portfolio"),
-                    link("https://www.linkedin.com/in/natalia-lebedinskaya-115512422/", "LinkedIn"),
+                    link("https://www.linkedin.com/in/natalia-lebedinskaya-a588a542b/", "LinkedIn"),
                 ]
             ),
             st["contact"],
@@ -204,37 +204,37 @@ def build_resume(path, content):
 
 EN = {
     "name": "Natalia Lebedinskaya",
-    "role": "Manual QA Engineer | API / Backend Testing | Fintech and AI Products",
-    "meta": "Russian citizen | Moving to Da Nang, Vietnam in early September 2026 | Remote worldwide / Vietnam | English A1, actively studying",
+    "role": "Manual QA Engineer | API / Backend / Mobile Testing | Fintech and AI Products",
+    "meta": "Russian citizen | Belgrade, Serbia focus | Office/hybrid in Serbia or remote from Serbia | English A1, Serbian beginner, actively studying",
     "summary_heading": "PROFILE",
     "summary": (
         "Manual QA / API QA specialist with 2+ years of hands-on QA and 3+ years in banking and fintech. "
-        "Experience testing banking services, client-data migrations, payment and terminal flows, and web/mobile AI products. "
-        "Strong in API/backend validation, SQL data checks, regression, defect investigation, test documentation and user support. "
-        "Available to start remotely now; based in Da Nang from early September 2026. Seeking remote international or Vietnam-based work with clear written contract and payment terms."
+        "Experience testing banking services, client-data migrations, public-transport payment products, terminal flows, web/mobile AI products and Telegram Mini App scenarios. "
+        "Strong in requirements analysis, API/backend validation, SQL data checks, regression, defect investigation, test documentation and clear user-facing bug reports. "
+        "Focused on Serbia: office/hybrid roles in Belgrade are the first priority, other Serbian cities are open, and international remote work from Serbia is also suitable."
     ),
     "skills_heading": "SKILLS AND PROFICIENCY",
     "skills": [
-        ("Strong", "Manual, functional, regression, smoke, integration and exploratory testing; test design; test cases; checklists; actionable bug reports; Postman; REST API; SQL; PostgreSQL; Swagger/OpenAPI"),
-        ("Working knowledge", "DBeaver, Kafka, Kibana, Kubernetes, Linux/Windows, Test IT, Chrome DevTools, Charles Proxy, Git/GitHub, mobile and web testing, release validation"),
-        ("Fundamentals", "Playwright and test-automation concepts"),
+        ("Strong", "Manual, functional, regression, smoke, integration and exploratory testing; requirements analysis; test design; test cases; checklists; actionable bug reports; Postman; REST API; SQL; PostgreSQL; Swagger/OpenAPI"),
+        ("Working knowledge", "DBeaver, Kafka, Kibana, Kubernetes, Linux/Windows, Test IT, Chrome DevTools, Charles Proxy, Git/GitHub, mobile and web testing, Telegram bot and Mini App testing, release validation"),
+        ("Fundamentals", "Playwright, test-automation concepts, HTML/CSS/JavaScript basics for QA communication"),
         ("Soft skills", "Analytical thinking, clear written communication, ownership, cross-functional collaboration and user empathy"),
-        ("Languages", "Russian and Ukrainian - native; English - A1, actively studying"),
+        ("Languages", "Russian and Ukrainian - native; English - A1, actively studying; Serbian - beginner"),
     ],
     "experience_heading": "EXPERIENCE",
     "experience": [
         {
             "title": "Software Testing Specialist | VTB Bank | Jun 2025 - Present",
             "lines": [
-                "Test internal banking services and client-data migration scenarios; validate UI, API/backend flows and SQL/PostgreSQL data.",
-                "Create test cases, checklists and defect reports; investigate failures and support regression and release validation with development and adjacent teams.",
+                "Test internal banking services and client-data migration scenarios; validate UI, API/backend flows and SQL/PostgreSQL data integrity.",
+                "Create test cases, checklists and defect reports; investigate failures, localize root conditions and support regression and release validation with development and adjacent teams.",
             ],
         },
         {
             "title": "QA Engineer | RNKB Bank | Jul 2024 - Jun 2025",
             "lines": [
-                "Tested a federal public-transport payment product, dispatcher and driver services, GPS and telemetry through functional, integration, API and regression checks.",
-                "Used Postman, Swagger, Test IT, SQL and Excel; completed onboarding and moved to independent project work in 2 weeks.",
+                "Tested a federal public-transport payment product, dispatcher and driver services, GPS/telemetry and terminal-related scenarios through functional, integration, API and regression checks.",
+                "Used Postman, Swagger, Test IT, SQL and Excel; prepared clear defects and completed onboarding to independent project work in 2 weeks.",
             ],
         },
         {
@@ -246,7 +246,7 @@ EN = {
         {
             "title": "Product QA | Independent AI web/mobile products | May 2026 - Present",
             "lines": [
-                "Test user journeys, mobile UI, AI generation, API and payment scenarios, edge cases, fixes and release readiness.",
+                "Test user journeys, mobile UI, Telegram Mini App flows, AI generation, API and payment scenarios, edge cases, fixes and release readiness.",
             ],
         },
     ],
@@ -254,12 +254,12 @@ EN = {
     "projects": [
         {
             "title": "CareerMove (private pet project)",
-            "description": "job-search and application-tracking web app; QA of aggregation, filtering, deduplication, auth, persistence and integrations.",
+            "description": "job-search and application-tracking web app; QA of aggregation, filtering, deduplication, auth, persistence, Telegram/Google Sheets integrations and Serbia-focused matching logic.",
         },
         {
             "title": "FOT AI",
             "description": "Telegram Mini App for event photo generation; requirements, negative scenarios, API and payment-flow coverage, and release checks.",
-            "url": "https://github.com/natalia-lebedinskaya/fototime-ai-mini-app",
+            "url": "https://github.com/ProhaskoNatalia/fototime-ai-mini-app",
             "link_label": "GitHub",
         },
     ],
@@ -268,43 +268,43 @@ EN = {
         "Professional retraining diploma - Software Testing Engineer. QA Course - Yandex Educational Technologies, 18 Apr 2024. "
         "VTB NFC Award for Outstanding Contribution to Key Business Results (H1 2025) and Award for Excellence in Team Collaboration (2025)."
     ),
-    "footer": "Available for remote international work now | Relocating to Da Nang, Vietnam in early September 2026",
+    "footer": "Priority: Belgrade office/hybrid QA role | Open to Serbia and remote from Serbia",
 }
 
 
 RU = {
     "name": "Наталия Лебединская",
-    "role": "Manual QA Engineer | API / Backend тестирование | Fintech и AI-продукты",
-    "meta": "Гражданство РФ | Переезд в Дананг, Вьетнам в начале сентября 2026 | Международная удаленка / Вьетнам | Английский A1, активно изучаю",
+    "role": "Manual QA Engineer | API / Backend / Mobile тестирование | Fintech и AI-продукты",
+    "meta": "Гражданство РФ | Фокус Белград, Сербия | Офис/гибрид в Сербии или remote из Сербии | Английский A1, сербский начальный, активно изучаю",
     "summary_heading": "ПРОФИЛЬ",
     "summary": (
-        "Manual QA / API QA специалист с 2+ годами практического опыта в тестировании и 3+ годами в банковской и fintech-сфере. "
-        "Тестирую банковские сервисы, миграцию клиентских данных, платежные и терминальные сценарии, web/mobile AI-продукты. "
-        "Сильные стороны: API/backend-проверки, SQL-валидация данных, регресс, локализация дефектов, тестовая документация и поддержка пользователей. "
-        "Могу начать удаленно сейчас; с начала сентября 2026 живу в Дананге. Рассматриваю международную удаленную работу или работу во Вьетнаме с понятным письменным договором и условиями оплаты."
+        "Manual QA / API QA специалист с 2+ годами практического опыта в тестировании и 3+ годами в banking/fintech. "
+        "Тестирую банковские сервисы, миграцию клиентских данных, транспортные платежные продукты, терминальные сценарии, web/mobile AI-продукты и Telegram Mini App сценарии. "
+        "Сильные стороны: анализ требований, API/backend-проверки, SQL-валидация данных, регресс, локализация дефектов, тестовая документация и понятные баг-репорты. "
+        "Фокус на Сербии: первый приоритет - офис/гибрид в Белграде, также рассматриваю другие города Сербии и международную удаленную работу из Сербии."
     ),
     "skills_heading": "НАВЫКИ И УРОВЕНЬ",
     "skills": [
-        ("Уверенно", "ручное, функциональное, регрессионное, smoke, интеграционное и исследовательское тестирование; тест-дизайн; тест-кейсы; чек-листы; баг-репорты; Postman; REST API; SQL; PostgreSQL; Swagger/OpenAPI"),
-        ("Рабочий уровень", "DBeaver, Kafka, Kibana, Kubernetes, Linux/Windows, Test IT, Chrome DevTools, Charles Proxy, Git/GitHub, mobile/web тестирование, release validation"),
-        ("Основы", "Playwright и принципы автоматизации тестирования"),
+        ("Уверенно", "ручное, функциональное, регрессионное, smoke, интеграционное и исследовательское тестирование; анализ требований; тест-дизайн; тест-кейсы; чек-листы; баг-репорты; Postman; REST API; SQL; PostgreSQL; Swagger/OpenAPI"),
+        ("Рабочий уровень", "DBeaver, Kafka, Kibana, Kubernetes, Linux/Windows, Test IT, Chrome DevTools, Charles Proxy, Git/GitHub, mobile/web тестирование, тестирование Telegram bot/Mini App, release validation"),
+        ("Основы", "Playwright, принципы автоматизации тестирования, HTML/CSS/JavaScript для коммуникации с разработкой"),
         ("Soft skills", "аналитическое мышление, ясная письменная коммуникация, ответственность, взаимодействие со смежными командами, внимание к пользовательскому опыту"),
-        ("Языки", "русский и украинский - родные; английский - A1, активно изучаю"),
+        ("Языки", "русский и украинский - родные; английский - A1, активно изучаю; сербский - начальный"),
     ],
     "experience_heading": "ОПЫТ",
     "experience": [
         {
             "title": "Специалист по тестированию | Банк ВТБ | июнь 2025 - настоящее время",
             "lines": [
-                "Тестирую внутренние банковские сервисы и сценарии миграции клиентских данных; проверяю UI, API/backend-потоки и данные в SQL/PostgreSQL.",
-                "Создаю тест-кейсы, чек-листы и баг-репорты; локализую сбои, провожу регресс и release validation совместно с разработкой и смежными командами.",
+                "Тестирую внутренние банковские сервисы и сценарии миграции клиентских данных; проверяю UI, API/backend-потоки и целостность данных в SQL/PostgreSQL.",
+                "Создаю тест-кейсы, чек-листы и баг-репорты; локализую условия воспроизведения, провожу регресс и release validation совместно с разработкой и смежными командами.",
             ],
         },
         {
             "title": "QA Engineer | РНКБ Банк | июль 2024 - июнь 2025",
             "lines": [
-                "Тестировала федеральный транспортный платежный продукт, сервисы диспетчеров и водителей, GPS и телеметрию: functional, integration, API и regression.",
-                "Работала с Postman, Swagger, Test IT, SQL и Excel; завершила онбординг и перешла к самостоятельной проектной работе за 2 недели.",
+                "Тестировала федеральный транспортный платежный продукт, сервисы диспетчеров и водителей, GPS/телеметрию и терминальные сценарии: functional, integration, API и regression.",
+                "Работала с Postman, Swagger, Test IT, SQL и Excel; готовила понятные дефекты и перешла к самостоятельной проектной работе за 2 недели.",
             ],
         },
         {
@@ -316,7 +316,7 @@ RU = {
         {
             "title": "Product QA | Независимые AI web/mobile продукты | май 2026 - настоящее время",
             "lines": [
-                "Проверяю пользовательские сценарии, mobile UI, AI-генерацию, API и платежные потоки, edge cases, исправления и готовность релиза.",
+                "Проверяю пользовательские сценарии, mobile UI, Telegram Mini App flows, AI-генерацию, API и платежные потоки, edge cases, исправления и готовность релиза.",
             ],
         },
     ],
@@ -324,12 +324,12 @@ RU = {
     "projects": [
         {
             "title": "CareerMove (приватный pet project)",
-            "description": "web-сервис поиска вакансий и учета откликов; тестирование агрегации, фильтров, дедупликации, авторизации, сохранения данных и интеграций.",
+            "description": "web-сервис поиска вакансий и учета откликов; тестирование агрегации, фильтров, дедупликации, авторизации, сохранения данных, Telegram/Google Sheets интеграций и Serbia-focused matching logic.",
         },
         {
             "title": "FOT AI",
             "description": "Telegram Mini App для генерации фотографий с мероприятия; требования, негативные сценарии, API, платежные потоки и release checks.",
-            "url": "https://github.com/natalia-lebedinskaya/fototime-ai-mini-app",
+            "url": "https://github.com/ProhaskoNatalia/fototime-ai-mini-app",
             "link_label": "GitHub",
         },
     ],
@@ -338,7 +338,7 @@ RU = {
         "Диплом о профессиональной переподготовке - инженер по тестированию ПО. Курс QA - АНО ДПО «Образовательные технологии Яндекса», 18.04.2024. "
         "Награды VTB NFC за значимый вклад в ключевые бизнес-результаты (I полугодие 2025) и командное взаимодействие (2025)."
     ),
-    "footer": "Готова к международной удаленной работе сейчас | Переезд в Дананг, Вьетнам в начале сентября 2026",
+    "footer": "Приоритет: QA office/hybrid в Белграде | Открыта к Сербии и remote из Сербии",
 }
 
 
@@ -347,3 +347,5 @@ if __name__ == "__main__":
     register_fonts()
     build_resume(ASSETS / "Natalia_Lebedinskaya_EN.pdf", EN)
     build_resume(ASSETS / "Natalia_Lebedinskaya_RU.pdf", RU)
+    build_resume(ASSETS / "Natalia_Lebedinskaya_QA_EN_2026-08.pdf", EN)
+    build_resume(ASSETS / "Natalia_Lebedinskaya_QA_RU_2026-08.pdf", RU)
