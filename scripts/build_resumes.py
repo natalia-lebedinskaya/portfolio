@@ -137,9 +137,9 @@ def build_resume(path, content):
 
     contact = [
         link("mailto:natalia.lebedinskaya@outlook.com", "natalia.lebedinskaya@outlook.com"),
-        link("https://www.linkedin.com/in/natalia-lebedinskaya-a588a542b/", "LinkedIn"),
-        link("https://github.com/ProhaskoNatalia", "GitHub"),
-        link("https://natalia-lebedinskaya.github.io/portfolio/", "Portfolio"),
+        link("https://www.linkedin.com/in/natalia-lebedinskaya-a588a542b/", "linkedin.com/in/natalia-lebedinskaya-a588a542b"),
+        link("https://github.com/ProhaskoNatalia", "github.com/ProhaskoNatalia"),
+        link("https://natalia-lebedinskaya.github.io/portfolio/", "natalia-lebedinskaya.github.io/portfolio"),
     ]
     header = Table([[[
         para(content["name"], st["name"]),
@@ -193,6 +193,9 @@ def build_resume(path, content):
             story += section(content["experience_heading"], st)
         story.append(role_block(item, st))
         story.append(Spacer(1, 3.5))
+    if content.get("impact"):
+        story += section(content["impact_heading"], st)
+        story.append(bullet_list(content["impact"], st))
     story += section(content["projects_heading"], st)
     for item in content["projects"]:
         text = f'<b>{item["title"]}</b> - {item["description"]}'
@@ -201,6 +204,8 @@ def build_resume(path, content):
         story.append(para(text, st["body"]))
     story += section(content["education_heading"], st)
     story.append(para(content["education"], st["body"]))
+    story += section(content["certifications_heading"], st)
+    story.append(para(content["certifications"], st["body"]))
     story += section(content["recognition_heading"], st)
     story.append(para(content["recognition"], st["body"]))
     story.append(Spacer(1, 5))
@@ -210,22 +215,24 @@ def build_resume(path, content):
 
 EN = {
     "name": "Natalia Lebedinskaya",
-    "role": "Manual QA Engineer | API, Backend and Mobile Testing | Fintech",
-    "headline": "QA specialist with banking domain depth, strong manual/API testing practice, SQL validation and product-minded release ownership. Priority: Belgrade office/hybrid QA roles; open to Serbia and remote from Serbia.",
+    "role": "Middle QA Engineer | Manual, API, Backend and Mobile Testing | Fintech",
+    "headline": "QA Engineer with 3+ years of commercial experience, including 2+ years in banking and FinTech projects. Strong in Manual, API, Backend, SQL/PostgreSQL validation, Web & Mobile testing, logs/Kibana and release-critical defect investigation.",
     "fit_heading": "Recruiter fit",
-    "fit": ["<b>Target:</b> Manual QA / API QA / Product QA", "<b>Seniority:</b> junior+ / middle- manual QA track", "<b>Salary target:</b> from $1100/month", "<b>Availability:</b> remote start; Serbia-focused", "<b>Work format:</b> Belgrade office/hybrid first"],
+    "fit": ["<b>Target:</b> Middle Manual QA / API QA", "<b>Level:</b> Middle QA Engineer", "<b>Salary target:</b> from $1100/month", "<b>Availability:</b> remote start; Serbia-focused", "<b>Work format:</b> Belgrade office/hybrid first", "<b>Communication:</b> RU/UA native; English A1"],
     "stack_heading": "Core stack",
-    "stack": ["Manual QA", "API testing", "Postman", "SQL", "PostgreSQL", "Swagger", "Regression", "Test cases", "Checklists", "Bug reports", "Mobile QA", "DevTools"],
+    "stack": ["Manual QA", "API testing", "Backend QA", "REST API", "Postman", "Swagger", "SQL", "PostgreSQL", "Kibana", "Charles Proxy", "DevTools", "TestIT", "Jira", "Regression", "Integration", "Smoke", "Exploratory", "Acceptance", "Web QA", "Mobile QA"],
     "tools_heading": "Tools",
-    "tools": "Postman, Swagger/OpenAPI, SQL, PostgreSQL, DBeaver, Test IT, Chrome DevTools, Charles Proxy, Kafka, Kibana, Kubernetes basics, Git/GitHub, Linux/Windows.",
+    "tools": "Postman, Swagger/OpenAPI, REST API, SQL, PostgreSQL, DBeaver, TestIT, Jira, Chrome DevTools, Charles Proxy, Kibana, application logs, Kafka basics, Kubernetes basics, Git/GitHub, Linux/Windows, Excel/Google Sheets.",
     "languages_heading": "Languages",
     "languages": ["Russian - native", "Ukrainian - native", "English - A1, actively studying", "Serbian - beginner"],
     "education_heading": "Education",
-    "education": "Professional retraining diploma - Software Testing Engineer. QA Course - Yandex Educational Technologies, 18 Apr 2024.",
+    "education": "<b>Higher education:</b> Landscape Architecture / Architecture and Design background - useful for visual accuracy, spatial thinking and detailed UI review. <b>Professional retraining:</b> Software Testing Engineer.",
+    "certifications_heading": "Certifications",
+    "certifications": "<b>Yandex Educational Technologies:</b> QA / Software Testing course, completed 18 Apr 2024.",
     "target_heading": "Location target",
     "target": "Belgrade, Serbia is the first priority. Open to office/hybrid in Serbia and remote international work from Serbia. Russian-speaking teams or beginner-friendly English/Serbian communication are preferred.",
     "summary_heading": "Profile",
-    "summary": "Manual QA / API QA specialist with 2+ years in hands-on testing and 3+ years in banking/fintech operations. I test complex product flows where quality depends on more than UI: API contracts, backend behavior, SQL data integrity, payment/terminal scenarios, migration logic and release risk. My strongest value for recruiters is the combination of QA discipline, fintech domain understanding, clear bug communication and fast onboarding into product context.",
+    "summary": "Middle QA Engineer with 3+ years of commercial experience, including 2+ years in banking and FinTech projects. Experienced in testing complex systems across web, mobile, backend, APIs, payment terminals and integrations. My work includes functional, regression, integration, smoke, exploratory and acceptance testing, plus end-to-end validation of business-critical scenarios. Strong hands-on practice with REST API testing in Postman/Swagger, backend data validation with SQL/PostgreSQL, defect investigation through application logs and Kibana, test documentation, migration testing, telemetry, GPS-related functionality and banking payment systems.",
     "experience_heading": "Experience",
     "experience": [
         {"title": "Software Testing Specialist", "company": "VTB Bank", "dates": "Jun 2025 - Present", "duration": "1 yr 3 mos", "bullets": ["Test internal banking services and client-data migration scenarios across UI, API/backend behavior and PostgreSQL data integrity.", "Design focused test cases, checklists and regression coverage for risk areas: data consistency, edge cases, service responses and release readiness.", "Investigate failures with developers and adjacent teams, localize reproducible conditions and turn ambiguous issues into actionable defect reports."]},
@@ -234,34 +241,42 @@ EN = {
         {"title": "Product QA", "company": "Independent AI web/mobile products", "dates": "May 2026 - Present", "duration": "4 mos", "bullets": ["Test user journeys, mobile UI, Telegram Mini App flows, AI generation, API/payment scenarios, edge cases, fixes and release readiness.", "Use product QA thinking: validate not only whether a feature works, but whether the user can recover from errors and complete the intended flow."]},
     ],
     "projects_heading": "Selected product QA projects",
+    "impact_heading": "Selected QA impact",
+    "impact": [
+        "Identified release-critical defects before production and helped teams reduce ambiguous behavior into reproducible, prioritized issues.",
+        "Supported major banking releases with API/backend checks, data validation and regression coverage around business-critical user flows.",
+        "Strengthened test coverage through clear cases, checklists, negative scenarios and close collaboration with developers, analysts and QA teams in Agile/Scrum.",
+    ],
     "projects": [
         {"title": "CareerMove", "description": "private job-search and application-tracking product; QA of aggregation, matching, deduplication, auth, persistence, Telegram/Google Sheets integrations and Serbia-focused vacancy filtering."},
         {"title": "FOT AI", "description": "Telegram Mini App for event photo generation; QA coverage for requirements, negative scenarios, mobile flow, API/payment logic and release checks.", "url": "https://github.com/ProhaskoNatalia/fototime-ai-mini-app", "link_label": "GitHub"},
     ],
     "recognition_heading": "Recognition",
     "recognition": "VTB NFC Award for Outstanding Contribution to Key Business Results (H1 2025) and Award for Excellence in Team Collaboration (2025).",
-    "footer": "Portfolio: natalia-lebedinskaya.github.io/portfolio | LinkedIn: natalia-lebedinskaya-a588a542b",
+    "footer": "Portfolio: natalia-lebedinskaya.github.io/portfolio | LinkedIn: linkedin.com/in/natalia-lebedinskaya-a588a542b | GitHub: github.com/ProhaskoNatalia",
 }
 
 
 RU = {
     "name": "Наталия Лебединская",
-    "role": "Manual QA Engineer | API, Backend и Mobile тестирование | Fintech",
-    "headline": "QA-специалист с банковским доменным опытом, сильной практикой manual/API testing, SQL-валидацией и продуктовым подходом к релизам. Приоритет - QA office/hybrid в Белграде; также Сербия и remote из Сербии.",
+    "role": "Middle QA Engineer | Manual, API, Backend и Mobile тестирование | Fintech",
+    "headline": "QA Engineer с 3+ годами коммерческого опыта, включая 2+ года в banking и FinTech проектах. Сильная практика Manual, API, Backend, SQL/PostgreSQL validation, Web & Mobile testing, logs/Kibana и расследования release-critical дефектов.",
     "fit_heading": "Для рекрутера",
-    "fit": ["<b>Цель:</b> Manual QA / API QA / Product QA", "<b>Уровень:</b> junior+ / middle- manual QA track", "<b>Зарплата:</b> от $1100/мес", "<b>Старт:</b> remote start; фокус Сербия", "<b>Формат:</b> Белград office/hybrid в приоритете"],
+    "fit": ["<b>Цель:</b> Middle Manual QA / API QA", "<b>Уровень:</b> Middle QA Engineer", "<b>Зарплата:</b> от $1100/мес", "<b>Старт:</b> remote start; фокус Сербия", "<b>Формат:</b> Белград office/hybrid в приоритете", "<b>Коммуникация:</b> RU/UA native; English A1"],
     "stack_heading": "Ключевой стек",
-    "stack": ["Manual QA", "API testing", "Postman", "SQL", "PostgreSQL", "Swagger", "Regression", "Test cases", "Checklists", "Bug reports", "Mobile QA", "DevTools"],
+    "stack": ["Manual QA", "API testing", "Backend QA", "REST API", "Postman", "Swagger", "SQL", "PostgreSQL", "Kibana", "Charles Proxy", "DevTools", "TestIT", "Jira", "Regression", "Integration", "Smoke", "Exploratory", "Acceptance", "Web QA", "Mobile QA"],
     "tools_heading": "Инструменты",
-    "tools": "Postman, Swagger/OpenAPI, SQL, PostgreSQL, DBeaver, Test IT, Chrome DevTools, Charles Proxy, Kafka, Kibana, базово Kubernetes, Git/GitHub, Linux/Windows.",
+    "tools": "Postman, Swagger/OpenAPI, REST API, SQL, PostgreSQL, DBeaver, TestIT, Jira, Chrome DevTools, Charles Proxy, Kibana, application logs, базово Kafka, базово Kubernetes, Git/GitHub, Linux/Windows, Excel/Google Sheets.",
     "languages_heading": "Языки",
     "languages": ["Русский - родной", "Украинский - родной", "Английский - A1, активно изучаю", "Сербский - начальный"],
     "education_heading": "Образование",
-    "education": "Диплом о профессиональной переподготовке - инженер по тестированию ПО. Курс QA - АНО ДПО «Образовательные технологии Яндекса», 18.04.2024.",
+    "education": "<b>Высшее образование:</b> направление Landscape Architecture / Architecture and Design - усиливает визуальную точность, пространственное мышление и внимательность при UI review. <b>Профессиональная переподготовка:</b> инженер по тестированию ПО.",
+    "certifications_heading": "Сертификаты",
+    "certifications": "<b>АНО ДПО «Образовательные технологии Яндекса»:</b> курс QA / Software Testing, завершён 18.04.2024.",
     "target_heading": "География",
     "target": "Первый приоритет - Белград, Сербия. Рассматриваю office/hybrid в Сербии и международную удаленную работу из Сербии. Предпочтительны русскоязычные команды или коммуникация, допускающая начальный английский/сербский.",
     "summary_heading": "Профиль",
-    "summary": "Manual QA / API QA специалист с 2+ годами практического тестирования и 3+ годами в banking/fintech. Тестирую сложные продуктовые потоки, где качество зависит не только от UI: API-контракты, backend-логика, SQL-целостность данных, платежные/терминальные сценарии, миграции и релизные риски. Моя ценность для команды - сочетание QA-дисциплины, банковского доменного опыта, понятной коммуникации по дефектам и быстрого погружения в продуктовый контекст.",
+    "summary": "Middle QA Engineer с 3+ годами коммерческого опыта, включая 2+ года в banking и FinTech проектах. Тестирую сложные системы across web, mobile, backend, APIs, payment terminals и integrations. Моя работа включает functional, regression, integration, smoke, exploratory и acceptance testing, а также end-to-end validation бизнес-критичных сценариев. Сильная hands-on практика: REST API testing в Postman/Swagger, backend data validation через SQL/PostgreSQL, defect investigation по application logs и Kibana, test documentation, migration testing, telemetry, GPS-related functionality и banking payment systems.",
     "experience_heading": "Опыт",
     "experience": [
         {"title": "Специалист по тестированию", "company": "Банк ВТБ", "dates": "июнь 2025 - настоящее время", "duration": "1 год 3 мес", "bullets": ["Тестирую внутренние банковские сервисы и сценарии миграции клиентских данных: UI, API/backend-поведение и целостность данных в PostgreSQL.", "Проектирую тест-кейсы, чек-листы и регрессионное покрытие для риск-зон: консистентность данных, edge cases, ответы сервисов и готовность релиза.", "Разбираю сбои совместно с разработкой и смежными командами, локализую условия воспроизведения и превращаю неясные проблемы в actionable bug reports."]},
@@ -270,13 +285,19 @@ RU = {
         {"title": "Product QA", "company": "Независимые AI web/mobile продукты", "dates": "май 2026 - настоящее время", "duration": "4 мес", "bullets": ["Проверяю user journeys, mobile UI, Telegram Mini App flows, AI-генерацию, API/payment scenarios, edge cases, исправления и готовность релиза.", "Использую продуктовый QA-подход: проверяю не только работу функции, но и восстановление после ошибок и завершение целевого пользовательского сценария."]},
     ],
     "projects_heading": "Product QA проекты",
+    "impact_heading": "Выбранный QA impact",
+    "impact": [
+        "Находила release-critical дефекты до production и помогала командам превращать неоднозначное поведение в воспроизводимые, приоритизированные issues.",
+        "Поддерживала крупные банковские релизы через API/backend checks, data validation и регрессионное покрытие бизнес-критичных user flows.",
+        "Усиливала test coverage через понятные кейсы, чек-листы, negative scenarios и плотную работу с developers, analysts и QA teams в Agile/Scrum.",
+    ],
     "projects": [
         {"title": "CareerMove", "description": "приватный продукт для поиска вакансий и учета откликов; QA агрегации, matching, дедупликации, авторизации, сохранения данных, Telegram/Google Sheets интеграций и Serbia-focused фильтрации вакансий."},
         {"title": "FOT AI", "description": "Telegram Mini App для генерации фотографий с мероприятия; QA-покрытие требований, негативных сценариев, mobile flow, API/payment logic и release checks.", "url": "https://github.com/ProhaskoNatalia/fototime-ai-mini-app", "link_label": "GitHub"},
     ],
     "recognition_heading": "Признание",
     "recognition": "Награды VTB NFC за значимый вклад в ключевые бизнес-результаты (I полугодие 2025) и командное взаимодействие (2025).",
-    "footer": "Portfolio: natalia-lebedinskaya.github.io/portfolio | LinkedIn: natalia-lebedinskaya-a588a542b",
+    "footer": "Portfolio: natalia-lebedinskaya.github.io/portfolio | LinkedIn: linkedin.com/in/natalia-lebedinskaya-a588a542b | GitHub: github.com/ProhaskoNatalia",
 }
 
 
