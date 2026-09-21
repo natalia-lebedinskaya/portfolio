@@ -216,7 +216,7 @@ def build_resume(path, content):
 EN = {
     "name": "Natalia Lebedinskaya",
     "role": "Middle QA Engineer | Manual, API, Backend and Mobile Testing | Fintech",
-    "headline": "QA Engineer with 3+ years of commercial experience, including 2+ years in banking and FinTech projects. Strong in Manual, API, Backend, SQL/PostgreSQL validation, Web & Mobile testing, logs/Kibana and release-critical defect investigation.",
+    "headline": "QA Engineer with 3+ years of commercial experience, including 3+ years in banking and FinTech projects. Strong in Manual, API, Backend, SQL/PostgreSQL validation, Web & Mobile testing, logs/Kibana and release-critical defect investigation.",
     "fit_heading": "Recruiter fit",
     "fit": ["<b>Target:</b> Middle Manual QA / API QA", "<b>Level:</b> Middle QA Engineer", "<b>Salary target:</b> from $1100/month", "<b>Availability:</b> remote start; Serbia-focused", "<b>Work format:</b> Belgrade office/hybrid first", "<b>Communication:</b> RU/UA native; English A1"],
     "stack_heading": "Core stack",
@@ -232,7 +232,7 @@ EN = {
     "target_heading": "Location target",
     "target": "Belgrade, Serbia is the first priority. Open to office/hybrid in Serbia and remote international work from Serbia. Russian-speaking teams or beginner-friendly English/Serbian communication are preferred.",
     "summary_heading": "Profile",
-    "summary": "Middle QA Engineer with 3+ years of commercial experience, including 2+ years in banking and FinTech projects. Experienced in testing complex systems across web, mobile, backend, APIs, payment terminals and integrations. My work includes functional, regression, integration, smoke, exploratory and acceptance testing, plus end-to-end validation of business-critical scenarios. Strong hands-on practice with REST API testing in Postman/Swagger, backend data validation with SQL/PostgreSQL, defect investigation through application logs and Kibana, test documentation, migration testing, telemetry, GPS-related functionality and banking payment systems.",
+    "summary": "Middle QA Engineer with 3+ years of commercial experience, including 3+ years in banking and FinTech projects. Experienced in testing complex systems across web, mobile, backend, APIs, payment terminals and integrations. My work includes functional, regression, integration, smoke, exploratory and acceptance testing, plus end-to-end validation of business-critical scenarios. Strong hands-on practice with REST API testing in Postman/Swagger, backend data validation with SQL/PostgreSQL, defect investigation through application logs and Kibana, test documentation, migration testing, telemetry, GPS-related functionality and banking payment systems.",
     "experience_heading": "Experience",
     "experience": [
         {"title": "Software Testing Specialist", "company": "VTB Bank", "dates": "Jun 2025 - Present", "duration": "1 yr 3 mos", "bullets": ["Test internal banking services and client-data migration scenarios across UI, API/backend behavior and PostgreSQL data integrity.", "Design focused test cases, checklists and regression coverage for risk areas: data consistency, edge cases, service responses and release readiness.", "Investigate failures with developers and adjacent teams, localize reproducible conditions and turn ambiguous issues into actionable defect reports."]},
@@ -260,7 +260,7 @@ EN = {
 RU = {
     "name": "Наталия Лебединская",
     "role": "Middle QA Engineer | Manual, API, Backend и Mobile тестирование | Fintech",
-    "headline": "QA Engineer с 3+ годами коммерческого опыта, включая 2+ года в banking и FinTech проектах. Сильная практика Manual, API, Backend, SQL/PostgreSQL validation, Web & Mobile testing, logs/Kibana и расследования release-critical дефектов.",
+    "headline": "QA Engineer с 3+ годами коммерческого опыта, включая 3+ года в banking и FinTech проектах. Сильная практика Manual, API, Backend, SQL/PostgreSQL validation, Web & Mobile testing, logs/Kibana и расследования release-critical дефектов.",
     "fit_heading": "Для рекрутера",
     "fit": ["<b>Цель:</b> Middle Manual QA / API QA", "<b>Уровень:</b> Middle QA Engineer", "<b>Зарплата:</b> от $1100/мес", "<b>Старт:</b> remote start; фокус Сербия", "<b>Формат:</b> Белград office/hybrid в приоритете", "<b>Коммуникация:</b> RU/UA native; English A1"],
     "stack_heading": "Ключевой стек",
@@ -276,7 +276,7 @@ RU = {
     "target_heading": "География",
     "target": "Первый приоритет - Белград, Сербия. Рассматриваю office/hybrid в Сербии и международную удаленную работу из Сербии. Предпочтительны русскоязычные команды или коммуникация, допускающая начальный английский/сербский.",
     "summary_heading": "Профиль",
-    "summary": "Middle QA Engineer с 3+ годами коммерческого опыта, включая 2+ года в banking и FinTech проектах. Тестирую сложные системы across web, mobile, backend, APIs, payment terminals и integrations. Моя работа включает functional, regression, integration, smoke, exploratory и acceptance testing, а также end-to-end validation бизнес-критичных сценариев. Сильная hands-on практика: REST API testing в Postman/Swagger, backend data validation через SQL/PostgreSQL, defect investigation по application logs и Kibana, test documentation, migration testing, telemetry, GPS-related functionality и banking payment systems.",
+    "summary": "Middle QA Engineer с 3+ годами коммерческого опыта, включая 3+ года в banking и FinTech проектах. Тестирую сложные системы across web, mobile, backend, APIs, payment terminals и integrations. Моя работа включает functional, regression, integration, smoke, exploratory и acceptance testing, а также end-to-end validation бизнес-критичных сценариев. Сильная hands-on практика: REST API testing в Postman/Swagger, backend data validation через SQL/PostgreSQL, defect investigation по application logs и Kibana, test documentation, migration testing, telemetry, GPS-related functionality и banking payment systems.",
     "experience_heading": "Опыт",
     "experience": [
         {"title": "Специалист по тестированию", "company": "Банк ВТБ", "dates": "июнь 2025 - настоящее время", "duration": "1 год 3 мес", "bullets": ["Тестирую внутренние банковские сервисы и сценарии миграции клиентских данных: UI, API/backend-поведение и целостность данных в PostgreSQL.", "Проектирую тест-кейсы, чек-листы и регрессионное покрытие для риск-зон: консистентность данных, edge cases, ответы сервисов и готовность релиза.", "Разбираю сбои совместно с разработкой и смежными командами, локализую условия воспроизведения и превращаю неясные проблемы в actionable bug reports."]},
